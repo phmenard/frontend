@@ -1,0 +1,5 @@
+.container-wrapper {
+  display: flex;
+  padding: 2px;
+  background-color: pink;
+}
