@@ -2,6 +2,7 @@ import "./css/index.css";
 import React from 'react';
 import { Route } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
+import SignUp from './components/forms/SignUp';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <MainContainer />
       </Route>
       <Route exact path='/signup'>
-        <p>Hello World !!</p>
+        <SignUp />
       </Route>
       <Route exact path='/create'>
         <p>create auction</p>
