@@ -15,6 +15,9 @@ function App() {
       </Route>
       <Route exact path='/create'>
         <p>create auction</p>
+      </Route >
+      <Route exact path='/login'>
+        <p>login</p>
       </Route>
 
 
