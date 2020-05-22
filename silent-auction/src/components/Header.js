@@ -1,25 +1,38 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import '../css/index.css'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "../css/index.css";
 
 const Header = () => {
-   return  (
-       <Router>
-   <div className="container-wrapper">
-       <div className="container-navbar">
-           <h1>SILENT AUCTION</h1>
+  return (
+    <Router>
+      <div className="container-wrapper">
+        <div className="container-navbar">
+          <h1>SILENT AUCTION</h1>
 
-           <nav className="navbar">
+          <nav className="navbar">
             <Route exact path="/"></Route>
-            <button><Link to="/">Home</Link></button>
-            <button><Link to="/create">Create Auction</Link></button>
+            <button>
+              <Link to="/">Home</Link>
+            </button>
+            <button>
+              <Link to="/create">Create Auction</Link>
+            </button>
             <button>Login</button>
+            <form>
+              <label
+                // htmlFor="email"
+                // className="email"
+                // input="text"
+                placeholder="Email Address"
+              >Email Address</label>
+              <label>Password</label>
+            </form>
             <button>Sign Up</button>
-           </nav>
-       </div>
-   </div>
-   </Router>
-    )
-    }
-    
-    export default Header;
+          </nav>
+        </div>
+      </div>
+    </Router>
+  );
+};
+
+export default Header;
