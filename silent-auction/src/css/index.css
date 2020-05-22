@@ -128,14 +128,32 @@ table {
 }
 .container-wrapper {
   display: flex;
-  padding: 2px;
+  padding: 6px;
   background-color: grey;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  border: solid black;
 }
 .container-wrapper .container-navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  border: solid red;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+.container-wrapper .container-navbar h1 {
+  padding: 4px;
+  border: solid;
+  width: 25%;
 }
 .container-wrapper .container-navbar .navbar {
-  align-content: center;
+  border: solid;
+  width: 75%;
+  justify-content: space-evenly;
+}
+.container-wrapper .container-navbar .navbar button {
+  padding: 5px;
+  width: 20%;
+  margin: 2%;
+  border-radius: 4px;
 }
