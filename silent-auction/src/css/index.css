@@ -1,5 +1,13 @@
 .container-wrapper {
   display: flex;
   padding: 2px;
-  background-color: pink;
+  background-color: grey;
+  justify-content: space-evenly;
+}
+.container-wrapper .container-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.container-wrapper .container-navbar .navbar {
+  align-content: center;
 }
