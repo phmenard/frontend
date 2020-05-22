@@ -7,14 +7,14 @@ const Header = () => {
        <Router>
    <div className="container-wrapper">
        <div className="container-navbar">
-           <h1>Silent Auction</h1>
+           <h1>SILENT AUCTION</h1>
 
            <nav className="navbar">
-            <Route path="/"></Route>
+            <Route exact path="/"></Route>
             <button><Link to="/">Home</Link></button>
             <button><Link to="/create">Create Auction</Link></button>
-            <button>Sign Up</button>
             <button>Login</button>
+            <button>Sign Up</button>
            </nav>
        </div>
    </div>

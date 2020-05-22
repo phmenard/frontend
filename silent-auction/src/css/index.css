@@ -144,7 +144,7 @@ table {
 .container-wrapper .container-navbar h1 {
   padding: 4px;
   border: solid;
-  width: 25%;
+  width: 30%;
 }
 .container-wrapper .container-navbar .navbar {
   border: solid;
@@ -156,4 +156,10 @@ table {
   width: 20%;
   margin: 2%;
   border-radius: 4px;
+  background-color: orange;
+  border: orange;
+}
+.container-wrapper .container-navbar .navbar button a {
+  text-decoration: none;
+  color: black;
 }
