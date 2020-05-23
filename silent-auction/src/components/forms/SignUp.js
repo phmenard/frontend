@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../css/index.css';
 import { Link } from 'react-router-dom';
-import MainContainer from '../MainContainer'
 
 const SignupCard = props => {
 
@@ -10,7 +9,7 @@ const SignupCard = props => {
     <div className="mainContainer">
       <div className="signUpCard" >
 
-        <h1>Create A new Account</h1>
+        <h1>Create A New Account</h1>
         <div className="formContainer">
           <form>
             <label htmlFor="firstName">First Name:</label>
@@ -52,18 +51,17 @@ const SignupCard = props => {
             //value={formData.name}
             //onChange={handleChange}
             />
-              <label htmlFor="password">User Type:</label>
+              <label htmlFor="userType">User Type:</label>
               <select
-                    name="size"
-                    id="size"
+                    name="userType"
+                    id="userType"
                     //value={formState.size}
-                    placeholder="size"
+                    placeholder="what do you want to do?"
                     //onChange={inputChange}
                 >
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium </option>
-                    <option value="Large">Large</option>
-                    <option value="Party Sizeng">Party Size</option>
+                    <option value="buyer">Buyer</option>
+                    <option value="seller">Seller </option>
+                    
                 </select>
 
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
 import SignUp from './components/forms/SignUp';
+import CreateAuctionCard from './components/forms/CreateAuction'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <SignUp />
       </Route>
       <Route exact path='/create'>
-        <p>create auction</p>
+        <CreateAuctionCard />
       </Route >
       <Route exact path='/login'>
         <p>login</p>
