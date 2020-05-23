@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../css/index.css';
 import { Link } from 'react-router-dom';
 
 const SignupCard = props => {
+
+  const [formState, setFormState] = useState({
+
+    id: 0,
+    firstName: "",
+    lastName: "", // the id of the seller
+    email: "",
+    password: ""
+    
+});
 
   return (
 
