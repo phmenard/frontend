@@ -46,7 +46,7 @@ const SignupCard = props => {
               name="firstName"
               type="text"
               placeholder="First name"
-            //value={formData.name}
+            //value={formData.firstName}
             onChange={inputChange}
             />
 
@@ -56,7 +56,7 @@ const SignupCard = props => {
               name="lastName"
               type="text"
               placeholder="Last name"
-            //value={formData.name}
+            //value={formData.lastName}
             onChange={inputChange}
             />
 
@@ -66,7 +66,7 @@ const SignupCard = props => {
               name="email"
               type="text"
               placeholder="Email"
-            //value={formData.name}
+            //value={formData.email}
             onChange={inputChange}
             />
 
@@ -74,16 +74,16 @@ const SignupCard = props => {
             <input
               id="password"
               name="password"
-              type="text"
+              type="password"
               placeholder="Password"
-            //value={formData.name}
+            //value={formData.password}
             onChange={inputChange}
             />
             <label htmlFor="userType">User Type:</label>
             <select
               name="userType"
               id="userType"
-              //value={formState.size}
+              //value={formState.userType}
               placeholder="what do you want to do?"
             onChange={inputChange}
             >
