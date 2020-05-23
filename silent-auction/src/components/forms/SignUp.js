@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/index.css';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const SignupCard = props => {
 
@@ -10,27 +11,38 @@ const SignupCard = props => {
     firstName: "",
     lastName: "", // the id of the seller
     email: "",
-    password: ""
+    password: "",
+    userType: "buyer"
 
   });
 
   const inputChange = (e) => {
     e.persist();
+    // validate the form
 
     let value = e.target.value;
     value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
     setFormState({ ...formState, [e.target.name]: value });
 
-    
-
   }
 
   useEffect(() => {
+    /*axios
+    .get()
+    .then(response => {
+              
+    })
+    .catch(err => {
+      console.log(err);
+    }
+    ); */
 
+  }, [formState]);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log(formState);
-
-}, [formState]);
+  };
 
   return (
 
@@ -39,15 +51,15 @@ const SignupCard = props => {
 
         <h1>Create A New Account</h1>
         <div className="formContainer">
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="firstName">First Name:</label>
             <input
               id="firstName"
               name="firstName"
               type="text"
               placeholder="First name"
-            //value={formData.firstName}
-            onChange={inputChange}
+              //value={formData.firstName}
+              onChange={inputChange}
             />
 
             <label htmlFor="lastName">Last Name:</label>
@@ -56,8 +68,8 @@ const SignupCard = props => {
               name="lastName"
               type="text"
               placeholder="Last name"
-            //value={formData.lastName}
-            onChange={inputChange}
+              //value={formData.lastName}
+              onChange={inputChange}
             />
 
             <label htmlFor="email">Email:</label>
@@ -66,8 +78,8 @@ const SignupCard = props => {
               name="email"
               type="text"
               placeholder="Email"
-            //value={formData.email}
-            onChange={inputChange}
+              //value={formData.email}
+              onChange={inputChange}
             />
 
             <label htmlFor="password">Password:</label>
@@ -76,8 +88,8 @@ const SignupCard = props => {
               name="password"
               type="password"
               placeholder="Password"
-            //value={formData.password}
-            onChange={inputChange}
+              //value={formData.password}
+              onChange={inputChange}
             />
             <label htmlFor="userType">User Type:</label>
             <select
@@ -85,24 +97,23 @@ const SignupCard = props => {
               id="userType"
               //value={formState.userType}
               placeholder="what do you want to do?"
-            onChange={inputChange}
+              onChange={inputChange}
             >
               <option value="buyer">Buyer</option>
               <option value="seller">Seller </option>
 
             </select>
 
+            <div className="buttonContainer" onClick={handleSubmit}>  <div className="signup">Submit</div></div>
 
           </form>
 
-
         </div>
 
-        <div className="buttonContainer"><div className="bid">Submit</div></div>
+        
 
       </div>
     </div>
-
 
   );
 }

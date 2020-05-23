@@ -178,6 +178,7 @@ body {
 .auctionCard .imageContainer img {
   width: 100%;
   height: 250px;
+  border-radius: 10px;
 }
 .auctionCard .buttonContainer {
   display: flex;
@@ -194,6 +195,7 @@ body {
   box-shadow: 2px 2px grey;
   height: 15px;
   width: 100px;
+  border: 2px solid orange;
   cursor: pointer;
 }
 .signUpCard {
@@ -222,11 +224,12 @@ body {
   display: flex;
   justify-content: flex-end;
 }
-.signUpCard .bid {
+.signUpCard .signup {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10px;
+  border: 2px solid orange;
   background-color: #4e4e52;
   padding: 5px;
   color: white;
@@ -289,6 +292,7 @@ body {
   box-shadow: 2px 2px grey;
   height: 15px;
   width: 100px;
+  border: 2px solid orange;
   cursor: pointer;
 }
 .createAuctionCard .formContainer form {
