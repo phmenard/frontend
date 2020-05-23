@@ -38,6 +38,9 @@ const CreateAuctionCard = props => {
             formState.images.push(objectURL);
             setFormState({ ...formState, [images]: objectURL});
 
+        }else {
+            value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+            setFormState({ ...formState, [e.target.name]: value });
         }
 
     }
@@ -61,7 +64,7 @@ const CreateAuctionCard = props => {
 
                         </div>
                         <label className="addImage" htmlFor="images">Add images:</label>
-                        <input  onChange={inputChange} type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                        <input  onChange={inputChange} type="file" id="image" name="image" accept="image/png, image/jpeg" />
 
 
                         <label htmlFor="title">Tilte:</label>
@@ -71,7 +74,7 @@ const CreateAuctionCard = props => {
                             type="text"
                             placeholder="Title"
                         //value={formData.name}
-                        //onChange={handleChange}
+                        onChange={inputChange}
                         />
 
                         <label htmlFor="description">Description:</label>
@@ -81,7 +84,7 @@ const CreateAuctionCard = props => {
                             type="text"
                             placeholder="Description"
                         //value={formData.name}
-                        //onChange={handleChange}
+                        onChange={inputChange}
                         />
 
                         <label htmlFor="duration">Duration:</label>
@@ -89,7 +92,7 @@ const CreateAuctionCard = props => {
                             name="duration"
                             id="duration"
                         //value={formState.size}
-                        //onChange={inputChange}
+                        onChange={inputChange}
                         >
                             <option value="onDay">1 Day</option>
                             <option value="twoDay">2 Days </option>
