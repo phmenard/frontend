@@ -1,10 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/index.css';
 import { Link } from 'react-router-dom';
 
 const CreateAuctionCard = props => {
 
-    const [images, setImages] = useState([]);
+    const [formState, setFormState] = useState({
+
+        id: 0,
+        images: [],
+        sellerId: 0, // the id of the seller
+        title: "",
+        description: "",
+        currentBid: 0,
+        duration: "",
+        //reserve: 100,// min price the seller will take for the item
+        //bidHistory: [] // array of objects holding all the bidder id's and what they bid for this item
+
+    });
+
+    const images = [];
+
+    useEffect(() => {
+
+
+        console.log(formState);
+
+    }, [formState]);
+
+
+    const inputChange = (e) => {
+        e.persist();
+
+        let value = e.target.value;
+        if (e.target.type === "file") {
+            value = e.target.files[0];
+            const objectURL = URL.createObjectURL(value)
+            formState.images.push(objectURL);
+            setFormState({ ...formState, [images]: objectURL});
+
+        }
+
+    }
 
     return (
 
@@ -14,9 +50,18 @@ const CreateAuctionCard = props => {
                 <h1>Create A New Auction</h1>
                 <div className="formContainer">
                     <form>
-                        <div className="imageContainer"></div>
-                        <label for="images">Add images:</label>
-                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                        <div className="imageContainer">
+                            {// map over the images 
+                                formState.images.map((image, i) => {
+                                    console.log(image);
+                                    return <div className="auctionImage"><img id={i} src={image} /></div>
+                                    
+                                })}
+
+
+                        </div>
+                        <label className="addImage" htmlFor="images">Add images:</label>
+                        <input  onChange={inputChange} type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
 
 
                         <label htmlFor="title">Tilte:</label>
@@ -60,7 +105,7 @@ const CreateAuctionCard = props => {
 
                 </div>
 
-                <div className="buttonContainer"><div className="createButton">Submit</div></div>
+                <div className="buttonContainer"><div className="createButton">Start Auction</div></div>
 
             </div>
         </div>
