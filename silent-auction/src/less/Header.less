@@ -1,0 +1,70 @@
+// <div className="container-wrapper">
+// <div className="container-navbar">
+//     <h1>Silent Auction</h1>
+
+//     <nav className="navbar">
+//      <Route path="/"></Route>
+//      <button><Link to="/">Home</Link></button>
+//      <button><Link to="/create">Create Auction</Link></button>
+//      <button>Sign Up</button>
+//      <button>Login</button>
+//     </nav>
+// </div>
+// </div>
+
+.container-wrapper {
+    display: flex;
+    padding: 2px;
+    background-color: grey;
+    justify-content: space-between;
+    border: solid black;
+
+    .container-navbar {
+        display: flex;
+        justify-content: space-evenly;
+        border: solid red;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+
+        
+    
+        h1 {
+            padding: 4px;
+            border: solid;
+            width: 20%;
+            
+        }
+
+        .navbar {
+            display: flex;
+            border: solid yellow;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+            
+            // label {
+            //     display: flex;
+            //     background-color: white;
+            //     padding: .5% 10%;
+            //     margin: 2%;
+            //     width: 1%;
+            // }
+        }
+    }
+
+    button{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1%;
+        width: 15%;
+        margin: 1%;
+        border: solid blue;
+        border-radius: 4px;
+        background-color: orange;
+    
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }   
