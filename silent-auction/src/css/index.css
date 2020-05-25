@@ -152,7 +152,7 @@ table {
   width: 100%;
   justify-content: space-evenly;
 }
-.container-wrapper .container-navbar .navbar button {
+button {
   display: flex;
   justify-content: space-evenly;
   padding: 1%;
@@ -162,7 +162,7 @@ table {
   border-radius: 4px;
   background-color: orange;
 }
-.container-wrapper .container-navbar .navbar button a {
+button a {
   text-decoration: none;
   color: black;
 }
