@@ -128,7 +128,7 @@ table {
 }
 .container-wrapper {
   display: flex;
-  padding: 6px;
+  padding: 2px;
   background-color: grey;
   justify-content: space-between;
   border: solid black;
@@ -147,27 +147,22 @@ table {
   width: 20%;
 }
 .container-wrapper .container-navbar .navbar {
-  border: solid;
-  width: 90%;
+  display: flex;
+  border: solid yellow;
+  width: 100%;
   justify-content: space-evenly;
 }
 .container-wrapper .container-navbar .navbar button {
   display: flex;
   justify-content: space-evenly;
-  padding: 5px;
-  width: 20%;
-  margin: 2%;
+  padding: 1%;
+  width: 15%;
+  margin: 1%;
+  border: solid blue;
   border-radius: 4px;
   background-color: orange;
 }
 .container-wrapper .container-navbar .navbar button a {
   text-decoration: none;
   color: black;
-}
-.container-wrapper .container-navbar .navbar label {
-  display: flex;
-  background-color: white;
-  padding: 0.5% 10%;
-  margin: 2%;
-  width: 1%;
 }
