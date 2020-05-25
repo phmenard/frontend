@@ -52,7 +52,7 @@ const SignupCard = props => {
         <h1>Create A New Account</h1>
         <div className="formContainer">
           <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name:</label>
+            <label htmlFor="firstName"></label>
             <input
               id="firstName"
               name="firstName"
@@ -62,7 +62,7 @@ const SignupCard = props => {
               onChange={inputChange}
             />
 
-            <label htmlFor="lastName">Last Name:</label>
+            <label htmlFor="lastName"></label>
             <input
               id="lastName"
               name="lastName"
@@ -72,7 +72,7 @@ const SignupCard = props => {
               onChange={inputChange}
             />
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email"></label>
             <input
               id="email"
               name="email"
@@ -82,7 +82,7 @@ const SignupCard = props => {
               onChange={inputChange}
             />
 
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password"></label>
             <input
               id="password"
               name="password"

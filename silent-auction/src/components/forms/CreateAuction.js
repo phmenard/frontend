@@ -82,7 +82,7 @@ const CreateAuctionCard = props => {
                         <input onChange={inputChange} type="file" id="image" name="image" accept="image/png, image/jpeg" />
 
 
-                        <label htmlFor="title">Tilte:</label>
+                        <label htmlFor="title"></label>
                         <input
                             id="title"
                             name="title"
@@ -92,7 +92,7 @@ const CreateAuctionCard = props => {
                             onChange={inputChange}
                         />
 
-                        <label htmlFor="description">Description:</label>
+                        <label htmlFor="description"></label>
                         <input
                             id="description"
                             name="description"
@@ -102,7 +102,7 @@ const CreateAuctionCard = props => {
                             onChange={inputChange}
                         />
 
-                        <label htmlFor="startingPrice">Starting Price:</label>
+                        <label htmlFor="startingPrice"></label>
                         <input
                             id="startingPrice"
                             name="startingPrice"
