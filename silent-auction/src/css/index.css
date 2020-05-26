@@ -324,3 +324,43 @@ body {
   justify-content: center;
   margin-top: 5%;
 }
+.container-wrapper {
+  display: flex;
+  padding: 2px;
+  background-color: grey;
+  justify-content: space-between;
+  border: solid black;
+}
+.container-wrapper .container-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid red;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+.container-wrapper .container-navbar h1 {
+  padding: 4px;
+  border: solid;
+  width: 20%;
+}
+.container-wrapper .container-navbar .navbar {
+  display: flex;
+  border: solid yellow;
+  width: 100%;
+  justify-content: space-evenly;
+}
+button {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+  width: 15%;
+  margin: 1%;
+  border: solid blue;
+  border-radius: 4px;
+  background-color: orange;
+}
+button a {
+  text-decoration: none;
+  color: black;
+}
